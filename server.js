@@ -86,9 +86,9 @@ if (process.env.NODE_ENV === "production") {
   app.use('/', express.static("electronicsmart-app/build"))
 
   // const rootRouter = express.Router();
-  app.get('(/*)?', async (req, res, next) => {
-    res.sendFile(path.join(buildPath, 'index.html'));
-  });
+  // app.get('(/*)?', async (req, res, next) => {
+  //   res.sendFile(path.join(buildPath, 'index.html'));
+  // });
 
 }
 
