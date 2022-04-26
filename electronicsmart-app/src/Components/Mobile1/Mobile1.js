@@ -21,7 +21,7 @@ import {
 import Nav from "../Header/Nav";
 export default function Mobile1() {
   const [pageNumber, setPageNumber] = useState(0);
-  let URL_BASE = `http://localhost:3002/product?type=mobile&limit=6`;
+  let URL_BASE = `https://electronics-app.herokuapp.com/product?type=mobile&limit=6`;
   const [Url, setUrl] = useState("");
   const dispatch = useDispatch();
   const [dat, setdat] = useState([]);

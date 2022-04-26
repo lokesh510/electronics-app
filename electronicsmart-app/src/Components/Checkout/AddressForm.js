@@ -121,7 +121,7 @@ export default function AddressForm(props) {
 
     if (user != null) {
       axios
-        .get(`http://localhost:3002/user?_id=${user._id}&onlyaddress=true`)
+        .get(`https://electronics-app.herokuapp.com/user?_id=${user._id}&onlyaddress=true`)
         .then((res) => {
           if (res.data.Address.length > 0) {
             setaddress(res.data.Address[res.data.Address.length - 1]);
@@ -150,7 +150,7 @@ export default function AddressForm(props) {
       console.log("POSTing address");
       console.log(props);
       props.test(false);
-      fetch(`http://localhost:3002/user?_id=${localStorage.getItem('id')}&addaddress=true`, {
+      fetch(`https://electronics-app.herokuapp.com/user?_id=${localStorage.getItem('id')}&addaddress=true`, {
         method: 'PATCH',
         body:JSON.stringify({
               Address:{

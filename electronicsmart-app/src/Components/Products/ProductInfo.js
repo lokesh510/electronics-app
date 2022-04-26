@@ -53,7 +53,7 @@ function ProductInfo() {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:3002/reviews?id=${product._id}`).then((res) => {
+    axios.get(`https://electronics-app.herokuapp.com/reviews?id=${product._id}`).then((res) => {
       setreview(res.data);
     });
 
@@ -74,7 +74,7 @@ function ProductInfo() {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3002/reviews", {
+      .post("https://electronics-app.herokuapp.com/reviews", {
         // id: crypto.randomUUID(),
         product_id: product._id,
         user_id: user._id,
@@ -84,7 +84,7 @@ function ProductInfo() {
       })
       .then((res) => {
         // axios
-        //   .get(`http://localhost:3002/reviews?id=${product._id}`)
+        //   .get(`https://electronics-app.herokuapp.com/reviews?id=${product._id}`)
         //   .then((res) => {
         //     setreview(res.data);
         //   });

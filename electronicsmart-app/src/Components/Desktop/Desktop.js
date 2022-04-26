@@ -22,7 +22,7 @@ import { useState, useEffect } from "react";
 import Nav from "../Header/Nav";
 export default function Desktop() {
   const [pageNumber, setPageNumber] = useState(0);
-  let URL_BASE = `http://localhost:3002/product?type=desktop&limit=6`;
+  let URL_BASE = `https://electronics-app.herokuapp.com/product?type=desktop&limit=6`;
   const [Url, setUrl] = useState("");
   const [dat, setdat] = useState([]);
   const [pri, setpri] = useState("");

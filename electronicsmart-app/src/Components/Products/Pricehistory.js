@@ -16,7 +16,7 @@ export function DisplayPriceHistory(props) {
   let [data, setData] = useState([]);
   useEffect(() => {
     if (click) {
-      fetch(`http://localhost:3002/price?product_id=${props.product_id}`)
+      fetch(`https://electronics-app.herokuapp.com/price?product_id=${props.product_id}`)
         .then((res) => res.json())
         .then((d) => {
           console.log(d[0].data);

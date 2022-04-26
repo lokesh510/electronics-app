@@ -4,7 +4,7 @@ info:
   description: API for website selling electonic items
   version: 1.0.0
 servers:
-  - url: http://localhost:3002/
+  - url: https://electronics-app.herokuapp.com/
 
 tags:
   - name: E-Mart

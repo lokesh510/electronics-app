@@ -71,7 +71,7 @@ export default function SignUp() {
   useEffect(() => {
     if (!EmailError) {
       axios
-        .post("http://localhost:3002/user?checkemail=true", {
+        .post("https://electronics-app.herokuapp.com/user?checkemail=true", {
           email: Email,
         })
         .then((res) => {
@@ -134,7 +134,7 @@ export default function SignUp() {
       // console.log(submiterror);
       console.log(user_data);
       axios
-        .post("http://localhost:3002/user", user_data)
+        .post("https://electronics-app.herokuapp.com/user", user_data)
         .then((res) =>{
             
       localStorage.setItem('token', res.data.token);

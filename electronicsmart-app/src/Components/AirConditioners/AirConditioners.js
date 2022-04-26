@@ -12,7 +12,7 @@ import Player from "./Player";
 import Slider from "@mui/material/Slider";
 export default function AirConditioners() {
   const [pageNumber, setPageNumber] = useState(0);
-  let URL_BASE = `http://localhost:3002/product?type=airconditioner&limit=6`;
+  let URL_BASE = `https://electronics-app.herokuapp.com/product?type=airconditioner&limit=6`;
   const [Url, setUrl] = useState("");
 
   const [dat, setdat] = useState([]);

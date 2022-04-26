@@ -48,7 +48,7 @@ export default function Checkout() {
   const handleNext = () => {
     // setUUD(crypto.randomUUID());
     if (activeStep === 2) {
-      axios.post("http://localhost:3002/orders", childPaymentdets);
+      axios.post("https://electronics-app.herokuapp.com/orders", childPaymentdets);
     }
     setActiveStep(activeStep + 1);
     setdisableButton(true);

@@ -21,7 +21,7 @@ export default function Profile() {
   useEffect(() => {
     if (currUser != null) {
       axios
-        .get(`http://localhost:3002/orders?id=${currUser._id}`)
+        .get(`https://electronics-app.herokuapp.com/orders?id=${currUser._id}`)
         .then((res) => {
           setoDet(res);
         });
@@ -205,7 +205,7 @@ export default function Profile() {
                                 />
                                 <EditIcon
                                   onClick={() => {
-                                    fetch(`http://localhost:3002/user?_id=${localStorage.getItem('id')}`,{
+                                    fetch(`https://electronics-app.herokuapp.com/user?_id=${localStorage.getItem('id')}`,{
                                       method: 'PATCH',
                                       body: JSON.stringify({
                                         firstName:
@@ -251,7 +251,7 @@ export default function Profile() {
                                 />
                                 <EditIcon
                                   onClick={() => {
-                                    fetch(`http://localhost:3002/user?_id=${localStorage.getItem('id')}`,{
+                                    fetch(`https://electronics-app.herokuapp.com/user?_id=${localStorage.getItem('id')}`,{
                                       method: 'PATCH',
                                       body: JSON.stringify({
                                         lastName:

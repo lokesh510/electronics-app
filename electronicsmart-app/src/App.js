@@ -39,7 +39,7 @@ useEffect(() => {
       
       if(!user)
       {
-          axios.get(`http://localhost:3002/user?_id=${localStorage.getItem('id')}`, {
+          axios.get(`https://electronics-app.herokuapp.com/user?_id=${localStorage.getItem('id')}`, {
             headers: {
             'authorization': `Bearer ${localStorage.getItem('token')}`
             }

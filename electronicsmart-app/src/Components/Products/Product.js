@@ -17,7 +17,7 @@ function Product(props) {
   useEffect(() => {
     console.log(id);
     axios
-      .get(`http://localhost:3002/product?_id=${id}`)
+      .get(`https://electronics-app.herokuapp.com/product?_id=${id}`)
       .then((response) => {
         console.log(response.data);
         dispatch(add_product(response.data[0]));

@@ -38,7 +38,7 @@ export default function ChangePasswordModal() {
   
   const dispatch = useDispatch();
   React.useEffect(() => {
-    axios.get(`http://localhost:3002/user?_id=${user._id}`).then((res) => {
+    axios.get(`https://electronics-app.herokuapp.com/user?_id=${user._id}`).then((res) => {
       setuser_db(res.data);
       console.log(user_db)
     });
@@ -48,7 +48,7 @@ export default function ChangePasswordModal() {
       if (
        newPassword===conPassword 
       ) {
-        fetch(`http://localhost:3002/user?_id=${localStorage.getItem('id')}`,{
+        fetch(`https://electronics-app.herokuapp.com/user?_id=${localStorage.getItem('id')}`,{
           method: 'PATCH',
           body: JSON.stringify({
             Password:

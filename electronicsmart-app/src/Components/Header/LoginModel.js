@@ -38,7 +38,7 @@ export default function BasicModal() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3002/login", {
+      .post("https://electronics-app.herokuapp.com/login", {
         email: Email,
         password: Password,
       })

@@ -11,7 +11,7 @@ function ProductimgBlock() {
   const product = useSelector(selectproduct);
 
   // useEffect(() => {
-  //   axios.get(`http://localhost:3002/product/${product_id}`).then((res) => {
+  //   axios.get(`https://electronics-app.herokuapp.com/product/${product_id}`).then((res) => {
   //     setproduct(res.data[0]);
   //   });
   // }, []);

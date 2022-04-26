@@ -22,7 +22,7 @@ import { useState, useEffect } from "react";
 
 export default function TV() {
   const [pageNumber, setPageNumber] = useState(0);
-  let URL_BASE = `http://localhost:3002/product?type=television&limit=6`;
+  let URL_BASE = `https://electronics-app.herokuapp.com/product?type=television&limit=6`;
   const [Url, setUrl] = useState("");
   const dispatch = useDispatch();
   const [dat, setdat] = useState([]);
