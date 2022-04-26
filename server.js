@@ -73,10 +73,29 @@ app.post("/avatar", upload.single("avatar"), async (req, res) => {
   }
 })
 
-if(process.env.NODE_ENV==="production"){
-  app.use(express.static("electronicsmart-app/build"))
+
+
+// const path = require("path");
+// app.use(express.static(path.join(__dirname,"./electronics-app","build")))
+
+
+
+
+
+if (process.env.NODE_ENV === "production") {
+  app.use('/', express.static("electronicsmart-app/build"))
+
+  const rootRouter = express.Router();
+  rootRouter.get('(/*)?', async (req, res, next) => {
+    res.sendFile(path.join(buildPath, 'index.html'));
+  });
+  app.use(rootRouter);
+
 }
+
+
 
 app.listen(port, () => {
   console.log(`server is running at http://localhost:${port}`);
 });
+
