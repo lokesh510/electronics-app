@@ -12,7 +12,7 @@ function CategoryOffer(props) {
   let [currentMenu, setCurrentMenu] = useState(props.initial);
 
   useEffect(() => {
-    fetch(`http://localhost:3002/offer?type=${currentMenu.toLocaleLowerCase()}`)
+    fetch(`https://electronics-app.herokuapp.com/offer?type=${currentMenu.toLocaleLowerCase()}`)
       .then((res) => res.json())
       .then(setclicked);
   }, [currentMenu]);
