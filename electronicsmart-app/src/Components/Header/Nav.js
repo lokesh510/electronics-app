@@ -396,7 +396,7 @@ function Nav() {
                     {" "}
                     <button className="logout_btn">View Profile</button>
                   </Link>
-                  <button className="logout_btn" onClick={()=>handlelogout}>
+                  <button className="logout_btn" onClick={()=>handlelogout()}>
                     <LogoutIcon></LogoutIcon> LOGOUT
                   </button>
                 </div>
