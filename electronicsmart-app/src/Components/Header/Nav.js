@@ -71,10 +71,10 @@ function Nav() {
   const dispatch = useDispatch();
   // const baseURL = "http://localhost:3006/productnames";
   const handlelogout = () => {
-    dispatch(logout());
+  
     localStorage.clear();
     
-    window.location.reload();
+//     window.location.reload();
   };
   // useEffect(() => {
   //   axios.get(baseURL).then((res) => {
