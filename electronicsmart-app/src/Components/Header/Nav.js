@@ -70,11 +70,11 @@ function Nav() {
   // const [product, setProduct] = useState({});
   const dispatch = useDispatch();
   // const baseURL = "http://localhost:3006/productnames";
-  const handlelogout = async () => {
+  const handlelogout =  () => {
   
     localStorage.clear();
     dispatch(logout());
-   window.location.reload();
+//    window.location.reload();
   };
   // useEffect(() => {
   //   axios.get(baseURL).then((res) => {
