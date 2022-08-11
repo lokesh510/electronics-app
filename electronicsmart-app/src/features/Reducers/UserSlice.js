@@ -13,7 +13,7 @@ const UserSlice = createSlice({
     },
 
     logout: (state, action) => {
-      state=undefined;
+      state.user=null;
     },
     changefn: (state, action) => {
       state.user.firstName = action.payload.fn;
