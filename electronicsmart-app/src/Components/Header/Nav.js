@@ -71,7 +71,7 @@ function Nav() {
   const dispatch = useDispatch();
   // const baseURL = "http://localhost:3006/productnames";
   const handlelogout =  () => {
-  
+  console.log("logging out")
     localStorage.removeItem("id");
     localStorage.removeItem("token");
     dispatch(logout());
