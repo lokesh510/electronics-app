@@ -70,7 +70,8 @@ function Nav() {
   // const [product, setProduct] = useState({});
   const dispatch = useDispatch();
   // const baseURL = "http://localhost:3006/productnames";
-  const handlelogout =  () => {
+  const handlelogout =  (e) => {
+    e.preventDefault();
   console.log("logging out")
     localStorage.removeItem("id");
     localStorage.removeItem("token");
@@ -396,7 +397,7 @@ function Nav() {
                     {" "}
                     <button className="logout_btn">View Profile</button>
                   </Link>
-                  <button className="logout_btn" onClick={()=>handlelogout()}>
+                  <button className="logout_btn" onClick={handlelogout}>
                     <LogoutIcon></LogoutIcon> LOGOUT
                   </button>
                 </div>
